@@ -9,11 +9,13 @@ const boxShadow = {
   "dark-card": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
   "dark-dropdown":
     "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
+  avatar: "0 16px 24px rgba(134, 151, 168, 0.4)",
 };
 
 const borderRadius = {
   small: "0.375rem",
   default: "0.5rem",
+  big: "30px",
   full: "9999px",
 };
 
@@ -22,6 +24,11 @@ const fontSize = {
   default: ["0.875rem", { lineHeight: "1.25rem" }],
   title: ["1.125rem", { lineHeight: "1.75rem" }],
   metric: ["1.875rem", { lineHeight: "2.25rem" }],
+};
+
+const fontFamily = {
+  article: ["var(--font-inter)"],
+  heading: ["var(--font-adelle)"],
 };
 
 const colors = {
@@ -48,10 +55,10 @@ const colors = {
       DEFAULT: p.gray["200"], // gray-200
     },
     content: {
-      subtle: p.gray["400"], // gray-400
-      DEFAULT: p.gray["500"], // gray-500
-      emphasis: p.gray["700"], // gray-700
-      strong: p.gray["900"], // gray-900
+      subtle: p.slate["400"], // gray-400
+      DEFAULT: p.slate["500"], // gray-500
+      emphasis: p.slate["700"], // gray-700
+      strong: p.slate["900"], // gray-900
       inverted: "#ffffff", // white
     },
   },
@@ -78,13 +85,14 @@ const colors = {
       DEFAULT: p.gray["800"], // gray-800
     },
     content: {
-      subtle: p.gray["600"], // gray-600
-      DEFAULT: p.gray["600"], // gray-600
-      emphasis: p.gray["200"], // gray-200
-      strong: p.gray["50"], // gray-50
+      subtle: p.slate["600"], // gray-600
+      DEFAULT: p.slate["600"], // gray-600
+      emphasis: p.slate["200"], // gray-200
+      strong: p.slate["50"], // gray-50
       inverted: "#000000", // black
     },
   },
+  ...p,
 };
 
 /** @type {import('tailwindcss').Config} */
@@ -100,6 +108,7 @@ const config = {
       boxShadow: boxShadow,
       borderRadius: borderRadius,
       fontSize: fontSize,
+      fontFamily: fontFamily,
     },
   },
   plugins: [],
