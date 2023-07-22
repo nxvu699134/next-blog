@@ -1,4 +1,3 @@
-// import { ComponentPropsWithoutRef } from "react";
 import Image from "next/image";
 import avatarImg from "@assets/images/avatar.jpg";
 import IconLink from "@components/icon-link";
@@ -6,11 +5,10 @@ import Icon from "@ui/icon";
 import Badge from "@ui/badge";
 import siteInfo from "@constants/site-info";
 
-// interface SideBarProps extends ComponentPropsWithoutRef<"aside"> {}
 const SideBar = () => {
   return (
     <aside className="flex w-[280px] flex-col rounded-big bg-light-background-subtle/50 p-10">
-      <div>
+      <div className="sticky top-10">
         <Image
           className="mx-auto mb-6 rounded-big shadow-avatar"
           src={avatarImg.src}

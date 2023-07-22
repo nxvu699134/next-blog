@@ -6,6 +6,8 @@ import designImg from "@assets/images/icon-design.svg";
 import developmentImg from "@assets/images/icon-development.svg";
 import responsiveImg from "@assets/images/icon-responsive.svg";
 import sourceCodeImg from "@assets/images/icon-source-code.svg";
+import scImg from "@assets/images/icon-sc.svg";
+import vimImg from "@assets/images/icon-vim.svg";
 import fenixImg from "@assets/images/fenix.webp";
 
 interface FeatureCardProps extends ComponentPropsWithoutRef<"div"> {
@@ -55,6 +57,24 @@ const features = [
   },
 ];
 
+const OutWorkEntry = (props: { img: string; title: string }) => {
+  const { img, title } = props;
+  return (
+    <div className="flex items-center">
+      <div className="mr-2 flex h-6 w-6 items-center justify-center rounded-full bg-slate-300">
+        <Image
+          src={img}
+          alt="outside of work icon"
+          width={16}
+          height={16}
+          className="inline"
+        />
+      </div>
+      <span>{title}</span>
+    </div>
+  );
+};
+
 export default function Home() {
   return (
     <div className="space-y-7">
@@ -98,6 +118,13 @@ export default function Home() {
           quote={`Never perfect. Perfection goal that changes. Never stops moving. \nCan chase, cannot catch.`}
           cite="https://starcraft.fandom.com/wiki/StarCraft_II:_Heart_of_the_Swarm_campaign_quotations/Char_Missions"
         />
+      </section>
+      <section>
+        <h2 className="mb-6">Outside of work</h2>
+        <div className="flex space-x-8">
+          <OutWorkEntry img={vimImg.src} title="Vimmer" />
+          <OutWorkEntry img={scImg.src} title="Startcraft Player" />
+        </div>
       </section>
     </div>
   );
