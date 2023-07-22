@@ -1,26 +1,104 @@
-import { Fragment } from "react";
+import { ComponentPropsWithoutRef } from "react";
+import Image from "next/image";
+import Card from "@ui/card";
+import Quote from "@ui/quote";
+import designImg from "@assets/images/icon-design.svg";
+import developmentImg from "@assets/images/icon-development.svg";
+import responsiveImg from "@assets/images/icon-responsive.svg";
+import sourceCodeImg from "@assets/images/icon-source-code.svg";
+import fenixImg from "@assets/images/fenix.webp";
+
+interface FeatureCardProps extends ComponentPropsWithoutRef<"div"> {
+  imgSrc: string;
+  header: string;
+  desc: string;
+}
+
+const FeatureCard = (props: FeatureCardProps) => {
+  const { imgSrc, header, desc } = props;
+
+  return (
+    <Card className="flex flex-col items-center p-6 text-center">
+      <Image
+        src={imgSrc}
+        className="mb-4"
+        alt="web design"
+        width={40}
+        height={40}
+      />
+      <h4 className="mb-3">{header}</h4>
+      <p className="text-[15px]">{desc}</p>
+    </Card>
+  );
+};
+
+const features = [
+  {
+    img: designImg.src,
+    header: "Web Design",
+    desc: "Modern, attractive and fancy design.",
+  },
+  {
+    img: developmentImg.src,
+    header: "Web Development",
+    desc: "High-quality development of sites with cutting-edge frameworks.",
+  },
+  {
+    img: responsiveImg.src,
+    header: "Web Responsive",
+    desc: "Works perfectly on multiple device sizes.",
+  },
+  {
+    img: sourceCodeImg.src,
+    header: "Code Quality",
+    desc: "Ship products from high-quality sources that are easy to maintain.",
+  },
+];
 
 export default function Home() {
   return (
-    <Fragment>
-      <h1>About Me</h1>
-      <section className="mb-7 space-y-4 pt-4">
-        <p>
-          Hi there! I{"'"}m Full-stuck Developer from Vietnam, working in web
-          development. I enjoy turning complex problems into simple.
-        </p>
-        <p>
-          My job is to build website so that it is functional, ease to use and
-          reasonable. I enjoy to learn new stuffs that can be applied into work,
-          so aim to make your product reach the threshold of perfection.
-        </p>
-        <p>
-          Maybe I just looks like a cat chasing my damn {'"'}perfection{'"'}{" "}
-          tail. I{"'"}m a Vimmer also a Starcraft player. Feel free to contact
-          me. Have a nice day! 🍺
-        </p>
+    <div className="space-y-7">
+      <section>
+        <h1>About Me</h1>
+        <div className="space-y-4 pt-4">
+          <p>
+            Hi there! I{"'"}m Full-stuck Developer from Vietnam, working in web
+            development. I enjoy turning complex problems into simple.
+          </p>
+          <p>
+            My job is to build website so that it is functional, ease to use and
+            reasonable. I enjoy to learn new stuffs that can be applied into
+            work, so aim to make your product reach the threshold of perfection.
+          </p>
+          <p>
+            Maybe I just looks like a cat chasing my damn {'"'}perfection{'"'}{" "}
+            tail. I{"'"}m a Vimmer also a Starcraft player. Feel free to contact
+            me. Have a nice day! 🍺
+          </p>
+        </div>
       </section>
-      <h2>What I{"'"}m doing</h2>
-    </Fragment>
+      <section>
+        <h2 className="mb-6">What I{"'"}m good</h2>
+        <div className="grid grid-cols-2 gap-x-8 gap-y-6">
+          {features.map((feat, idx) => (
+            <FeatureCard
+              key={`FeatureCard_${idx}`}
+              imgSrc={feat.img}
+              header={feat.header}
+              desc={feat.desc}
+            />
+          ))}
+        </div>
+      </section>
+      <section>
+        <h2 className="mb-6">Favourite quote</h2>
+        <Quote
+          img={fenixImg.src}
+          author="Abathur"
+          quote={`Never perfect. Perfection goal that changes. Never stops moving. \nCan chase, cannot catch.`}
+          cite="https://starcraft.fandom.com/wiki/StarCraft_II:_Heart_of_the_Swarm_campaign_quotations/Char_Missions"
+        />
+      </section>
+    </div>
   );
 }

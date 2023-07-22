@@ -5,6 +5,7 @@ import {
   RiLinkedinFill,
   RiGithubLine,
   RiCalendarEventLine,
+  RiDoubleQuotesL,
 } from "react-icons/ri";
 import { SlLocationPin } from "react-icons/sl";
 import { MdMailOutline } from "react-icons/md";
@@ -20,6 +21,7 @@ const iconMap = Object.freeze({
   emailLine: MdMailOutline,
   smartphoneLine: HiOutlineDeviceMobile,
   externalLinkLine: HiOutlineExternalLink,
+  doubleQuoteL: RiDoubleQuotesL,
 });
 
 export type IconString = keyof typeof iconMap;

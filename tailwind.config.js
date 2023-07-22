@@ -15,7 +15,8 @@ const boxShadow = {
 const borderRadius = {
   small: "0.375rem",
   default: "0.5rem",
-  big: "30px",
+  semi: "20px",
+  big: "28px",
   full: "9999px",
 };
 

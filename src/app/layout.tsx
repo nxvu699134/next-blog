@@ -11,9 +11,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${aleo.variable}`}>
-      <body className={classnames(inter.className)}>
+      <body className={classnames(inter.className, "leading-[1.65]")}>
         <NavBar />
-        <main className="mx-auto flex max-w-5xl rounded-b-big rounded-tl-[30px] bg-light-background">
+        <main className="mx-auto flex max-w-5xl rounded-b-big rounded-tl-big bg-light-background">
           <SideBar />
           <div id="main-content" className="mx-8 my-10">
             {children}
