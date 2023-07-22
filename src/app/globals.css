@@ -3,16 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
   }
 }
 
@@ -20,4 +14,63 @@ body {
   background-image: url("../assets/images/illustration.jpg");
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-light-content-emphasis;
+  margin: 0;
+  font-family: var(--font-aleo);
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+}
+
+h1::before,
+h1::after {
+  content: "";
+  border-radius: 0.5rem;
+  height: 5px;
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+}
+
+h1:before {
+  @apply bg-blue-600;
+  width: 50px;
+}
+
+h1::after {
+  @apply bg-orange-400;
+  width: 16px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 1.25rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 1rem;
 }

@@ -28,7 +28,7 @@ const fontSize = {
 
 const fontFamily = {
   article: ["var(--font-inter)"],
-  heading: ["var(--font-adelle)"],
+  heading: ["var(--font-aleo)"],
 };
 
 const colors = {
