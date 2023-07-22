@@ -43,16 +43,16 @@ const colors = {
       inverted: "#ffffff", // white
     },
     background: {
-      muted: p.gray["50"], // gray-50
-      subtle: p.gray["100"], // gray-100
+      muted: p.slate["50"], // gray-50
+      subtle: p.slate["100"], // gray-100
       DEFAULT: "#ffffff", // white
-      emphasis: p.gray["700"], // gray-700
+      emphasis: p.slate["700"], // gray-700
     },
     border: {
-      DEFAULT: p.gray["200"], // gray-200
+      DEFAULT: p.slate["200"], // gray-200
     },
     ring: {
-      DEFAULT: p.gray["200"], // gray-200
+      DEFAULT: p.slate["200"], // gray-200
     },
     content: {
       subtle: p.slate["400"], // gray-400
