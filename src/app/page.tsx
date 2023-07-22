@@ -99,7 +99,7 @@ export default function Home() {
       </section>
       <section>
         <h2 className="mb-6">What I{"'"}m good</h2>
-        <div className="grid grid-cols-2 gap-x-8 gap-y-6">
+        <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2">
           {features.map((feat, idx) => (
             <FeatureCard
               key={`FeatureCard_${idx}`}

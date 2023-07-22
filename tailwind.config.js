@@ -110,6 +110,9 @@ const config = {
       borderRadius: borderRadius,
       fontSize: fontSize,
       fontFamily: fontFamily,
+      screens: {
+        lg: "992px",
+      },
     },
   },
   plugins: [],

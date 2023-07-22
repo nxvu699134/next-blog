@@ -7,7 +7,7 @@ import siteInfo from "@constants/site-info";
 
 const SideBar = () => {
   return (
-    <aside className="flex w-[280px] flex-col rounded-big bg-light-background-subtle/50 p-10">
+    <aside className="flex w-full flex-col items-center rounded-big bg-light-background-subtle/50 p-10 lg:w-[280px]">
       <div className="sticky top-10">
         <Image
           className="mx-auto mb-6 rounded-big shadow-avatar"
@@ -27,7 +27,7 @@ const SideBar = () => {
           <IconLink href={siteInfo.twitter} icon="twitterFill"></IconLink>
           <IconLink href={siteInfo.linkedin} icon="linkedinFill"></IconLink>
         </div>
-        <ul className="space-y-3 text-default text-light-content">
+        <ul className="w-fit space-y-3 text-default text-light-content">
           <li className="flex items-center">
             <Icon name="calendarLine" className="mr-3.5" size={20} /> March 04,
             1996

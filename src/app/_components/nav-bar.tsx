@@ -26,13 +26,13 @@ const NavLink = (props: NavLinkProps) => {
 
 const NavBar = () => {
   return (
-    <nav className="mx-auto flex max-w-5xl flex-wrap items-center justify-between">
+    <nav className="mx-auto hidden max-w-5xl flex-wrap items-center justify-between sm:flex">
       <div
-        className="relative ml-auto h-[68px] rounded-tr-[30px] bg-light-background pl-4 pr-10 pt-4"
+        className="relative ml-auto h-[68px] w-full rounded-t-big bg-light-background lg:w-fit lg:rounded-tl-none lg:pl-4 lg:pr-10 lg:pt-4"
         id="navbar-default"
       >
         <div
-          className="absolute left-[-131px] top-0 h-full w-[135px]"
+          className="absolute left-[-131px] top-0 hidden h-full w-[135px] lg:block"
           style={{
             backgroundImage: `url(${navEdgeImg.src})`,
           }}
