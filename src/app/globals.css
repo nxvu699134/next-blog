@@ -11,6 +11,7 @@
 }
 
 body {
+  @apply p-8 text-light-content;
   background-image: url("../assets/images/illustration.jpg");
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
@@ -32,6 +33,7 @@ h1 {
   font-size: 2rem;
   font-weight: bold;
   position: relative;
+  margin-bottom: 24px;
 }
 
 h1::before,
@@ -45,7 +47,7 @@ h1::after {
 }
 
 h1:before {
-  @apply bg-blue-600;
+  @apply bg-blue-500;
   width: 50px;
 }
 

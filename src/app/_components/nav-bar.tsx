@@ -39,7 +39,7 @@ const NavBar = () => {
         />
         <ul className="flex h-full items-center justify-center space-x-1.5">
           <li>
-            <NavLink href="/">Home</NavLink>
+            <NavLink href="/">About</NavLink>
           </li>
           <li>
             <NavLink href="/blog">Blog</NavLink>

@@ -11,7 +11,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${inter.variable} ${aleo.variable}`}>
-      <body className={classnames(inter.className, "bg-illustration p-8")}>
+      <body className={classnames(inter.className)}>
         <NavBar />
         <main className="mx-auto flex max-w-5xl rounded-b-big rounded-tl-[30px] bg-light-background">
           <SideBar />

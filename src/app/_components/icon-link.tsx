@@ -11,6 +11,8 @@ const IconLink = (props: IconLinkProps) => {
     <a
       href={href}
       className="text-light-content-emphasis hover:text-light-brand-emphasis"
+      target="_blank"
+      rel="noopener"
     >
       <Icon name={icon} size={18}></Icon>
     </a>

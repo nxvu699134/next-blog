@@ -57,8 +57,8 @@ const colors = {
     content: {
       subtle: p.slate["400"], // gray-400
       DEFAULT: p.slate["500"], // gray-500
-      emphasis: p.slate["700"], // gray-700
-      strong: p.slate["900"], // gray-900
+      emphasis: p.slate["600"], // gray-700
+      strong: p.slate["800"], // gray-900
       inverted: "#ffffff", // white
     },
   },

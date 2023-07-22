@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef } from "react";
+// import { ComponentPropsWithoutRef } from "react";
 import Image from "next/image";
 import avatarImg from "@assets/images/avatar.jpg";
 import IconLink from "@components/icon-link";
@@ -6,8 +6,8 @@ import Icon from "@ui/icon";
 import Badge from "@ui/badge";
 import siteInfo from "@constants/site-info";
 
-interface SideBarProps extends ComponentPropsWithoutRef<"aside"> {}
-const SideBar = (props: SideBarProps) => {
+// interface SideBarProps extends ComponentPropsWithoutRef<"aside"> {}
+const SideBar = () => {
   return (
     <aside className="flex w-[280px] flex-col rounded-big bg-light-background-subtle/50 p-10">
       <div>
@@ -18,9 +18,9 @@ const SideBar = (props: SideBarProps) => {
           width={180}
           height={180}
         />
-        <h3 className="mb-4 text-center font-heading text-2xl font-medium text-light-content-emphasis">
+        <h2 className="mb-4 text-center font-medium text-light-content-emphasis">
           Nguyen <b>Xuan Vu</b>
-        </h3>
+        </h2>
         <div className="flex justify-center">
           <Badge variant="secondary">Web Developer</Badge>
         </div>
@@ -44,7 +44,12 @@ const SideBar = (props: SideBarProps) => {
           </li>
           <li className="flex items-center">
             <Icon name="emailLine" className="mr-3.5" size={20} />
-            <a href={`mailto:${siteInfo.email}`}>{siteInfo.email}</a>
+            <a
+              href={`mailto:${siteInfo.email}`}
+              className="hover:text-light-brand"
+            >
+              {siteInfo.email}
+            </a>
           </li>
           <li className="flex items-center">
             <Icon name="githubLine" className="mr-3.5" size={20} />
@@ -52,8 +57,10 @@ const SideBar = (props: SideBarProps) => {
               href={`https://${siteInfo.github}`}
               target="_blank"
               rel="noopener"
+              className="hover:text-light-brand"
             >
-              {siteInfo.github}
+              @nxvu699134{" "}
+              <Icon name="externalLinkLine" className="mb-2 inline" size={12} />
             </a>
           </li>
         </ul>
