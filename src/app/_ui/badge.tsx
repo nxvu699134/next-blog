@@ -1,5 +1,5 @@
 import { ComponentPropsWithoutRef } from "react";
-import classnames from "classnames";
+import clsx from "clsx";
 
 type Variant = "secondary";
 type Size = "md";
@@ -22,7 +22,7 @@ const Badge = (props: BadgeProps) => {
   const { variant, size = "md", children } = props;
   return (
     <span
-      className={classnames(
+      className={clsx(
         "inline-block rounded-big",
         variantClass[variant],
         sizeClass[size],

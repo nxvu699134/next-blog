@@ -2,7 +2,7 @@
 import { PropsWithChildren } from "react";
 import Link, { LinkProps } from "next/link";
 import { usePathname } from "next/navigation";
-import classnames from "classnames";
+import clsx from "clsx";
 import navEdgeImg from "@assets/images/nav-edge.svg";
 
 interface NavLinkProps extends PropsWithChildren<LinkProps> {}
@@ -13,7 +13,7 @@ const NavLink = (props: NavLinkProps) => {
   const isActive = pathName === href;
   return (
     <Link
-      className={classnames(
+      className={clsx(
         "rounded-lg px-4 py-2 uppercase",
         isActive && "bg-light-brand text-light-brand-inverted",
       )}
