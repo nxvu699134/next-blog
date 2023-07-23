@@ -9,6 +9,7 @@ import sourceCodeImg from "@assets/images/icon-source-code.svg";
 import scImg from "@assets/images/icon-sc.svg";
 import vimImg from "@assets/images/icon-vim.svg";
 import fenixImg from "@assets/images/fenix.webp";
+import cheerImg from "@assets/images/icon-cheer.svg";
 
 interface FeatureCardProps extends ComponentPropsWithoutRef<"div"> {
   imgSrc: string;
@@ -80,7 +81,7 @@ export default function Home() {
     <div className="space-y-7">
       <section>
         <h1>About Me</h1>
-        <div className="space-y-4 pt-4">
+        <div className="space-y-4">
           <p>
             Hi there! I{"'"}m Full-stuck Developer from Vietnam, working in web
             development. I enjoy turning complex problems into simple.
@@ -93,7 +94,14 @@ export default function Home() {
           <p>
             Maybe I just looks like a cat chasing my damn {'"'}perfection{'"'}{" "}
             tail. I{"'"}m a Vimmer also a Starcraft player. Feel free to contact
-            me. Have a nice day! 🍺
+            me. Have a nice day!{" "}
+            <Image
+              src={cheerImg.src}
+              className="ml-1 inline"
+              alt="cheer"
+              width={28}
+              height={28}
+            />
           </p>
         </div>
       </section>

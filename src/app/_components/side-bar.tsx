@@ -1,5 +1,5 @@
 import Image from "next/image";
-import avatarImg from "@assets/images/avatar.jpg";
+import avatarImg from "@assets/images/avatar2.webp";
 import IconLink from "@components/icon-link";
 import Icon from "@ui/icon";
 import Badge from "@ui/badge";

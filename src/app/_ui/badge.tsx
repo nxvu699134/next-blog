@@ -23,7 +23,7 @@ const Badge = (props: BadgeProps) => {
   return (
     <span
       className={classnames(
-        "rounded-big",
+        "inline-block rounded-big",
         variantClass[variant],
         sizeClass[size],
       )}

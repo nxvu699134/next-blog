@@ -10,6 +10,7 @@ const boxShadow = {
   "dark-dropdown":
     "0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1)",
   avatar: "0 16px 24px rgba(134, 151, 168, 0.4)",
+  "timeline-dot": "0 0 0 4px rgba(59, 130, 246, 0.25)",
 };
 
 const borderRadius = {

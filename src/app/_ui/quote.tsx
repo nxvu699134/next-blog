@@ -26,7 +26,16 @@ const Quote = (props: QuoteProps) => {
           style={{ clipPath: clippath }}
           className="absolute left-8 top-[-30px] h-[80px] w-[80px]"
         >
-          <Image src={img} alt="quote author avatar" width={80} height={80} />
+          <Image
+            src={img}
+            alt="quote author avatar"
+            width={80}
+            height={80}
+            style={{
+              width: 80,
+              height: 80,
+            }}
+          />
         </div>
         <blockquote
           cite={cite}
