@@ -15,6 +15,10 @@ const SideBar = () => {
           alt="avatar"
           width={180}
           height={180}
+          style={{
+            width: 180,
+            height: 180,
+          }}
         />
         <h2 className="mb-4 text-center font-medium text-light-content-emphasis">
           Nguyen <b>Xuan Vu</b>

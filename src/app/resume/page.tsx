@@ -112,15 +112,13 @@ const Resume = () => {
           />
           Tech Knowledge
         </h2>
-        <div className="mb-1 space-x-2 text-sm">
+        <div className="grid grid-cols-3 gap-2 text-center text-sm md:grid-cols-4 lg:grid-cols-5">
           <Badge variant="secondary">HTML</Badge>
           <Badge variant="secondary">SASS</Badge>
           <Badge variant="secondary">NodeJS</Badge>
           <Badge variant="secondary">NextJS</Badge>
           <Badge variant="secondary">Angular</Badge>
           <Badge variant="secondary">Svelte</Badge>
-        </div>
-        <div className="space-x-2 text-sm">
           <Badge variant="secondary">Typescript</Badge>
           <Badge variant="secondary">Go</Badge>
           <Badge variant="secondary">Python</Badge>
