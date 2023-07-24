@@ -9,7 +9,11 @@ import {
 } from "react-icons/ri";
 import { SlLocationPin } from "react-icons/sl";
 import { MdMailOutline } from "react-icons/md";
-import { HiOutlineDeviceMobile, HiOutlineExternalLink } from "react-icons/hi";
+import {
+  HiOutlineDeviceMobile,
+  HiOutlineExternalLink,
+  HiOutlineDownload,
+} from "react-icons/hi";
 
 const iconMap = Object.freeze({
   facebookFill: RiFacebookFill,
@@ -22,6 +26,7 @@ const iconMap = Object.freeze({
   smartphoneLine: HiOutlineDeviceMobile,
   externalLinkLine: HiOutlineExternalLink,
   doubleQuoteL: RiDoubleQuotesL,
+  downloadFill: HiOutlineDownload,
 });
 
 export type IconString = keyof typeof iconMap;

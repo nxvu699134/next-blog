@@ -30,7 +30,7 @@ const FeatureCard = (props: FeatureCardProps) => {
         height={40}
       />
       <h4 className="mb-3">{header}</h4>
-      <p className="text-[15px]">{desc}</p>
+      <p>{desc}</p>
     </Card>
   );
 };
@@ -62,7 +62,7 @@ const OutWorkEntry = (props: { img: string; title: string }) => {
   const { img, title } = props;
   return (
     <div className="flex items-center">
-      <div className="mr-2 flex h-6 w-6 items-center justify-center rounded-full bg-slate-300">
+      <div className="mr-2 flex h-6 w-6 items-center justify-center rounded-full bg-slate-300 ">
         <Image
           src={img}
           alt="outside of work icon"

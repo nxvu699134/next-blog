@@ -3,6 +3,7 @@ import avatarImg from "@assets/images/avatar2.webp";
 import IconLink from "@components/icon-link";
 import Icon from "@ui/icon";
 import Badge from "@ui/badge";
+import CTALink from "@components/cta-link";
 import siteInfo from "@constants/site-info";
 
 const SideBar = () => {
@@ -31,7 +32,7 @@ const SideBar = () => {
           <IconLink href={siteInfo.twitter} icon="twitterFill"></IconLink>
           <IconLink href={siteInfo.linkedin} icon="linkedinFill"></IconLink>
         </div>
-        <ul className="w-fit space-y-3 text-default text-light-content">
+        <ul className="mb-6 w-fit space-y-3 text-default text-light-content">
           <li className="flex items-center">
             <Icon name="calendarLine" className="mr-3.5" size={20} /> March 04,
             1996
@@ -66,6 +67,10 @@ const SideBar = () => {
             </a>
           </li>
         </ul>
+        <CTALink download>
+          <Icon name="downloadFill" size={20} className="mr-2" />
+          Download CV
+        </CTALink>
       </div>
     </aside>
   );
