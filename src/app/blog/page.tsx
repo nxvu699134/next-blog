@@ -58,7 +58,7 @@ const Blog = () => {
   return (
     <Fragment>
       <h1>Blog</h1>
-      <div className="gap-x-8 lg:grid lg:grid-cols-2">
+      <div className="grid lg:grid-cols-2 lg:gap-8">
         {posts.map((p, idx) => (
           <PostCard key={`PostCard_${idx}`} post={p} />
         ))}

@@ -26,7 +26,7 @@ const NavLink = (props: NavLinkProps) => {
 
 const NavBar = () => {
   return (
-    <nav className="mx-auto hidden max-w-5xl flex-wrap items-center justify-between sm:flex">
+    <nav className="mx-auto hidden w-full max-w-5xl flex-wrap items-center justify-between sm:flex sm:w-11/12 md:w-10/12 lg:w-full">
       <div
         className="relative ml-auto h-[68px] w-full rounded-t-big bg-light-background lg:w-fit lg:rounded-tl-none lg:pl-4 lg:pr-10 lg:pt-4"
         id="navbar-default"
