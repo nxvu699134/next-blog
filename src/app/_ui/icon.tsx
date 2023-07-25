@@ -8,7 +8,7 @@ import {
   RiDoubleQuotesL,
 } from "react-icons/ri";
 import { SlLocationPin } from "react-icons/sl";
-import { MdMailOutline } from "react-icons/md";
+import { MdMailOutline, MdOutlineDocumentScanner } from "react-icons/md";
 import {
   HiOutlineDeviceMobile,
   HiOutlineExternalLink,
@@ -27,6 +27,7 @@ const iconMap = Object.freeze({
   externalLinkLine: HiOutlineExternalLink,
   doubleQuoteL: RiDoubleQuotesL,
   downloadFill: HiOutlineDownload,
+  documentLine: MdOutlineDocumentScanner,
 });
 
 export type IconString = keyof typeof iconMap;

@@ -24,6 +24,8 @@
       "@components/*": ["./src/app/_components/*"],
       "@constants/*": ["./src/app/_constants/*"],
       "@ui/*": ["./src/app/_ui/*"],
+      "@utils/*": ["./src/app/_utils/*"],
+      "types/*": ["./src/app/_types/*"],
       "@assets/*": ["./src/assets/*"]
     }
   },
