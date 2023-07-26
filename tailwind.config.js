@@ -59,41 +59,12 @@ const colors = {
       DEFAULT: p.slate["200"], // gray-200
     },
     content: {
+      faint: p.slate["200"],
       subtle: p.slate["400"], // gray-400
       DEFAULT: p.slate["500"], // gray-500
       emphasis: p.slate["600"], // gray-700
       strong: p.slate["800"], // gray-900
       inverted: "#ffffff", // white
-    },
-  },
-  // dark mode
-  dark: {
-    brand: {
-      faint: "#0B1229", // custom
-      muted: p.blue["950"], // blue-950
-      subtle: p.blue["800"], // blue-800
-      DEFAULT: p.blue["500"], // blue-500
-      emphasis: p.blue["400"], // blue-400
-      inverted: p.gray["950"], // gray-950
-    },
-    background: {
-      muted: "#131A2B", // custom
-      subtle: p.gray["800"], // gray-800
-      DEFAULT: p.gray["900"], // gray-900
-      emphasis: p.gray["300"], // gray-300
-    },
-    border: {
-      DEFAULT: p.gray["800"], // gray-800
-    },
-    ring: {
-      DEFAULT: p.gray["800"], // gray-800
-    },
-    content: {
-      subtle: p.slate["600"], // gray-600
-      DEFAULT: p.slate["600"], // gray-600
-      emphasis: p.slate["200"], // gray-200
-      strong: p.slate["50"], // gray-50
-      inverted: "#000000", // black
     },
   },
   ...p,
@@ -116,6 +87,50 @@ const config = {
       screens: {
         lg: "992px",
       },
+      typography: ({ theme }) => ({
+        slate: {
+          css: {
+            "--tw-prose-body": theme("colors.light.content"),
+            "--tw-prose-headings": theme("colors.light.content.strong"),
+            "--tw-prose-lead": theme("colors.light.content.emphasis"),
+            "--tw-prose-links": theme("colors.light.content.strong"),
+            "--tw-prose-bold": theme("colors.light.content.strong"),
+            "--tw-prose-counters": theme("colors.light.content.emphasis"),
+            "--tw-prose-bullets": theme("colors.light.content.subtle"),
+            "--tw-prose-hr": theme("colors.light.content.subtle"),
+            "--tw-prose-quotes": theme("colors.light.content.strong"),
+            "--tw-prose-quote-borders": theme("colors.light.content.subtle"),
+            "--tw-prose-captions": theme("colors.light.content.emphasis"),
+            "--tw-prose-code": theme("colors.light.content.strong"),
+            "--tw-prose-pre-code": theme("colors.light.content.faint"),
+            "--tw-prose-pre-bg": theme("colors.light.content.strong"),
+            "--tw-prose-th-borders": theme("colors.light.content.subtle"),
+            "--tw-prose-td-borders": theme("colors.light.content.faint"),
+            "--tw-prose-invert-body": theme("colors.light.content.faint"),
+            "--tw-prose-invert-headings": theme("colors.white"),
+            "--tw-prose-invert-lead": theme("colors.light.content.subtle"),
+            "--tw-prose-invert-links": theme("colors.white"),
+            "--tw-prose-invert-bold": theme("colors.white"),
+            "--tw-prose-invert-counters": theme("colors.light.content.subtle"),
+            "--tw-prose-invert-bullets": theme("colors.light.content.emphasis"),
+            "--tw-prose-invert-hr": theme("colors.light.content.emphasis"),
+            "--tw-prose-invert-quotes": theme("colors.light.content.faint"),
+            "--tw-prose-invert-quote-borders": theme(
+              "colors.light.content.emphasis",
+            ),
+            "--tw-prose-invert-captions": theme("colors.light.content.subtle"),
+            "--tw-prose-invert-code": theme("colors.white"),
+            "--tw-prose-invert-pre-code": theme("colors.light.content.subtle"),
+            "--tw-prose-invert-pre-bg": "rgb(0 0 0 / 50%)",
+            "--tw-prose-invert-th-borders": theme(
+              "colors.light.content.emphasis",
+            ),
+            "--tw-prose-invert-td-borders": theme(
+              "colors.light.content.emphasis",
+            ),
+          },
+        },
+      }),
     },
   },
   plugins: [require("@tailwindcss/typography")],

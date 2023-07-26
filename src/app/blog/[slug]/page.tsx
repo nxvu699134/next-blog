@@ -9,7 +9,7 @@ interface BlogDetailProps {
 const BlogDetail = (props: BlogDetailProps ) => {
   const {params} = props;
   const postData = getPost(params.slug, false);
-  return <article className="prose">
+  return <article className="prose-slate">
     <MDXRemote source={postData.content} />
   </article>
 }
