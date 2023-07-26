@@ -63,7 +63,7 @@ const colors = {
       subtle: p.slate["400"], // gray-400
       DEFAULT: p.slate["500"], // gray-500
       emphasis: p.slate["600"], // gray-700
-      strong: p.slate["800"], // gray-900
+      strong: p.slate["700"], // gray-900
       inverted: "#ffffff", // white
     },
   },
@@ -88,9 +88,9 @@ const config = {
         lg: "992px",
       },
       typography: ({ theme }) => ({
-        slate: {
+        blog: {
           css: {
-            "--tw-prose-body": theme("colors.light.content"),
+            "--tw-prose-body": theme("colors.light.content.DEFAULT"),
             "--tw-prose-headings": theme("colors.light.content.strong"),
             "--tw-prose-lead": theme("colors.light.content.emphasis"),
             "--tw-prose-links": theme("colors.light.content.strong"),
