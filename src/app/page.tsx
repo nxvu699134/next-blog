@@ -106,7 +106,7 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <h2 className="mb-6">What I{"'"}m good</h2>
+        <h2>What I{"'"}m good</h2>
         <div className="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-2">
           {features.map((feat, idx) => (
             <FeatureCard
@@ -119,7 +119,7 @@ export default function Home() {
         </div>
       </section>
       <section>
-        <h2 className="mb-6">Favourite quote</h2>
+        <h2>Favourite quote</h2>
         <Quote
           img={fenixImg.src}
           author="Abathur"
@@ -128,7 +128,7 @@ export default function Home() {
         />
       </section>
       <section>
-        <h2 className="mb-6">Outside of work</h2>
+        <h2>Outside of work</h2>
         <div className="flex space-x-8">
           <OutWorkEntry img={vimImg.src} title="Vimmer" />
           <OutWorkEntry img={scImg.src} title="Startcraft Player" />

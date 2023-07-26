@@ -11,7 +11,7 @@ const Resume = () => {
     <Fragment>
       <h1>Résumé</h1>
       <div className="mb-7">
-        <h2 className="mb-6 flex items-center">
+        <h2 className="flex items-center">
           <Image
             className="mr-3"
             src={experienceImg.src}
@@ -78,7 +78,7 @@ const Resume = () => {
         </Timeline.Root>
       </div>
       <div className="mb-7">
-        <h2 className="mb-6 flex items-center">
+        <h2 className="flex items-center">
           <Image
             className="mr-3"
             src={educationImg.src}
@@ -102,7 +102,7 @@ const Resume = () => {
         </Timeline.Root>
       </div>
       <div className="mb-7">
-        <h2 className="mb-6 flex items-center">
+        <h2 className="flex items-center">
           <Image
             className="mr-3"
             src={techImg.src}
@@ -126,7 +126,7 @@ const Resume = () => {
         </div>
       </div>
       <div>
-        <h2 className="mb-6 flex items-center">Outside of work</h2>
+        <h2 className="flex items-center">Outside of work</h2>
         <ul className="space-y-2 text-sm">
           <li>
             I recently started my blog website, where I write about my learning.

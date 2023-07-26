@@ -11,6 +11,9 @@ export const getPost = <B extends boolean>(
   filePath: string,
   isOnlyMatter: B,
 ): B extends true ? PostMatter : PostData => {
+  if (!path.extname(filePath)) {
+    filePath = path.join(POST_DIR, `${filePath}${EXTENSION}`);
+  }
   const m = matter.read(filePath);
   const slug = path.parse(filePath).name;
   if (isOnlyMatter) {
@@ -25,8 +28,8 @@ export const getAllPost = () => {
       (f) => path.extname(f).toLowerCase() === EXTENSION,
     );
 
-    const m = postFiles.map((fileName) => ({
-      ...getPost(path.join(POST_DIR, fileName), true),
+    const m = postFiles.map((filePath) => ({
+      ...getPost(path.join(POST_DIR, filePath), true),
     }));
     return m.sort((pA, pB) => (pA.date > pB.date ? -1 : 1));
   } catch (e) {
