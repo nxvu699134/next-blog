@@ -101,7 +101,7 @@ const config = {
             "--tw-prose-quotes": theme("colors.light.content.strong"),
             "--tw-prose-quote-borders": theme("colors.light.content.subtle"),
             "--tw-prose-captions": theme("colors.light.content.emphasis"),
-            "--tw-prose-code": theme("colors.light.content.strong"),
+            "--tw-prose-code": theme("colors.light.content.emphasis"),
             "--tw-prose-pre-code": theme("colors.light.content.faint"),
             "--tw-prose-pre-bg": theme("colors.light.content.strong"),
             "--tw-prose-th-borders": theme("colors.light.content.subtle"),

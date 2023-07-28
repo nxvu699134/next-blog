@@ -10,7 +10,9 @@ interface NavLinkProps extends PropsWithChildren<LinkProps> {}
 const NavLink = (props: NavLinkProps) => {
   const { href, children } = props;
   const pathName = usePathname();
-  const isActive = pathName === href;
+  const isActive =
+    (pathName === "/" && pathName === href) ||
+    (pathName !== "/" && pathName.split("/")[1] === href.toString().slice(1));
   return (
     <Link
       className={clsx(

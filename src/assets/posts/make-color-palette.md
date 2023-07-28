@@ -13,7 +13,7 @@ RGB is the most common formats for representing color on website. But it's not u
 
 For example, what color is it or what color looks like ?
 
-<center >#0BAD31</center>
+```#0BAD31```
 
 No idea right?
 
