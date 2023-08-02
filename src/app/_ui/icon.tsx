@@ -8,11 +8,16 @@ import {
   RiDoubleQuotesL,
 } from "react-icons/ri";
 import { SlLocationPin } from "react-icons/sl";
-import { MdMailOutline, MdOutlineDocumentScanner } from "react-icons/md";
+import {
+  MdMailOutline,
+  MdOutlineDocumentScanner,
+  MdClose,
+} from "react-icons/md";
 import {
   HiOutlineDeviceMobile,
   HiOutlineExternalLink,
   HiOutlineDownload,
+  HiOutlineMenu,
 } from "react-icons/hi";
 
 const iconMap = Object.freeze({
@@ -28,6 +33,8 @@ const iconMap = Object.freeze({
   doubleQuoteL: RiDoubleQuotesL,
   downloadFill: HiOutlineDownload,
   documentLine: MdOutlineDocumentScanner,
+  closeLine: MdClose,
+  menuLine: HiOutlineMenu,
 });
 
 export type IconString = keyof typeof iconMap;
