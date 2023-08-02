@@ -23,7 +23,10 @@ export default function RootLayout({
         )}
       >
         <NavBar />
-        <main className="mx-auto flex w-full max-w-5xl flex-col rounded-big  bg-light-background sm:w-11/12 sm:rounded-t-none md:w-10/12 lg:w-full lg:flex-row lg:rounded-tl-big">
+        <main
+          id="main-container"
+          className="mx-auto flex w-full max-w-5xl flex-col rounded-big  bg-light-background sm:w-11/12 sm:rounded-t-none md:w-10/12 lg:w-full lg:flex-row lg:rounded-tl-big"
+        >
           {!shouldHideSidebar && <SideBar />}
           <div id="main-content" className="mx-6 my-10 sm:mx-8">
             {children}

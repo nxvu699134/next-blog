@@ -80,3 +80,14 @@ h5 {
 h6 {
   font-size: 1rem;
 }
+
+.toc-link {
+  @apply text-light-content;
+  text-decoration: none;
+  border-bottom: 1px dashed;
+}
+
+.toc-link:hover {
+  @apply text-light-content-strong;
+  border-style: solid;
+}
