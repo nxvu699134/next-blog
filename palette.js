@@ -152,6 +152,20 @@ const blue = {
   950: "#172554",
 };
 
+const cyan = {
+  50: "#ebfdfe",
+  100: "#cef9fd",
+  200: "#a4f2fb",
+  300: "#67e7f8",
+  400: "#22d2ed",
+  500: "#06b5d3",
+  600: "#0890b1",
+  700: "#0e748f",
+  800: "#155e75",
+  900: "#164e63",
+  950: "#083344",
+};
+
 export const PALETTE = {
   slate,
   gray,
@@ -164,4 +178,5 @@ export const PALETTE = {
   lime,
   orange,
   amber,
+  cyan,
 };
