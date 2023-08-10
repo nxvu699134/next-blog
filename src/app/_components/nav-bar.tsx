@@ -17,7 +17,7 @@ const NavLink = (props: NavLinkProps) => {
   return (
     <Link
       className={clsx(
-        "block rounded-lg uppercase sm:px-4 sm:py-2",
+        "block rounded-lg uppercase sm:px-4 sm:py-2 lg:py-1.5",
         !isActive && "max-sm:text-blue-300 sm:hover:text-light-content-subtle",
         isActive && "text-light-brand-inverted sm:bg-light-brand",
         "max-sm:px-16 max-sm:py-3.5 max-sm:text-2xl",
