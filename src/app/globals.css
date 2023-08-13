@@ -81,8 +81,8 @@ h6 {
   font-size: 1rem;
 }
 
+/* ============================Markdown things========================================= */
 .toc-link {
-  @apply text-light-content;
   text-decoration: none;
   border-bottom: 1px dashed;
 }
@@ -90,4 +90,16 @@ h6 {
 .toc-link:hover {
   @apply text-light-content-strong;
   border-style: solid;
+}
+
+[data-rehype-pretty-code-fragment] pre {
+  @apply border bg-slate-100 p-0;
+}
+
+[data-rehype-pretty-code-fragment] pre label {
+  @apply bg-slate-400 px-4 py-0.5 text-light-content-inverted;
+}
+
+[data-rehype-pretty-code-fragment] pre code {
+  @apply block px-4 py-3;
 }

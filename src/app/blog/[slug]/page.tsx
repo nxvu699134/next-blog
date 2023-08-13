@@ -1,22 +1,41 @@
 import { Fragment } from "react";
-import { getPost } from "@utils/post";
-import { compileMDX } from "next-mdx-remote/rsc";
+import { compileMDX, MDXRemoteProps } from "next-mdx-remote/rsc";
 import rehypeSlug from "rehype-slug";
+import rehypePrettyCode, {
+  Options as PrettyCodeOptions,
+} from "rehype-pretty-code";
+import type { MDXComponents } from "mdx/types";
+import { getPost } from "@utils/post";
 import { generateTOC } from "@utils/toc";
+import PreCodeBlock from "@ui/markdown/pre-code-block";
 
 interface BlogDetailProps {
   params: { slug: string };
 }
 
+const mdxComponents: MDXComponents = {
+  pre: PreCodeBlock,
+};
+
 const useMDX = async (source: string) => {
   const { content } = await compileMDX({
     source: source,
+    components: mdxComponents,
     options: {
       mdxOptions: {
-        rehypePlugins: [rehypeSlug],
+        rehypePlugins: [
+          rehypeSlug,
+          [
+            rehypePrettyCode,
+            {
+              theme: "github-light",
+              keepBackground: false,
+            } as PrettyCodeOptions,
+          ],
+        ],
       },
     },
-  });
+  } as MDXRemoteProps);
   const toc = generateTOC(source);
   return { toc, content };
 };
