@@ -1,6 +1,6 @@
 "use client";
 import clsx from "clsx";
-import "./globals.css";
+import "@styles/globals.scss";
 import NavBar from "@components/nav-bar";
 import SideBar from "@components/side-bar";
 import { inter, aleo } from "./fonts";

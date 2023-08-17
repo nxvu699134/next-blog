@@ -12,8 +12,8 @@
 
 body {
   @apply bg-slate-200 text-light-content lg:bg-[length:32%];
-  background-image: url("../assets/images/poly-top.svg"),
-    url("../assets/images/poly-bottom.svg");
+  background-image: url("../../assets/images/poly-top.svg"),
+    url("../../assets/images/poly-bottom.svg");
   background-position:
     left top,
     right bottom;
@@ -85,21 +85,32 @@ h6 {
 .toc-link {
   text-decoration: none;
   border-bottom: 1px dashed;
-}
 
-.toc-link:hover {
-  @apply text-light-content-strong;
-  border-style: solid;
+  &:hover {
+    @apply text-light-content-strong;
+    border-style: solid;
+  }
 }
 
 [data-rehype-pretty-code-fragment] pre {
   @apply border bg-slate-100 p-0;
-}
 
-[data-rehype-pretty-code-fragment] pre label {
-  @apply bg-slate-400 px-4 py-0.5 text-light-content-inverted;
-}
+  label {
+    @apply bg-slate-400 px-4 py-0.5 text-light-content-inverted;
+  }
 
-[data-rehype-pretty-code-fragment] pre code {
-  @apply block px-4 py-3;
+  code {
+    @apply block px-4 py-3;
+
+    [data-chars-id="error"] {
+      @apply border-b-2 border-b-red-500 bg-red-200 text-red-600;
+      font-weight: bold;
+      padding: 2px 4px;
+      border-radius: 4px;
+
+      & > * {
+        color: inherit !important;
+      }
+    }
+  }
 }

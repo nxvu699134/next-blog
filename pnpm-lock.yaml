@@ -22,7 +22,7 @@ dependencies:
     version: 4.0.3
   next:
     specifier: 13.4.8
-    version: 13.4.8(react-dom@18.2.0)(react@18.2.0)
+    version: 13.4.8(react-dom@18.2.0)(react@18.2.0)(sass@1.65.1)
   next-mdx-remote:
     specifier: ^4.4.1
     version: 4.4.1(react-dom@18.2.0)(react@18.2.0)
@@ -85,6 +85,9 @@ devDependencies:
   rehype-pretty-code:
     specifier: ^0.10.0
     version: 0.10.0(shiki@0.14.3)
+  sass:
+    specifier: ^1.65.1
+    version: 1.65.1
   shiki:
     specifier: ^0.14.3
     version: 0.14.3
@@ -3220,6 +3223,9 @@ packages:
     engines: {node: '>= 4'}
     dev: true
 
+  /immutable@4.3.2:
+    resolution: {integrity: sha512-oGXzbEDem9OOpDWZu88jGiYCvIsLHMvGw+8OXlpsvTFvIQplQbjg1B1cvKg8f7Hoch6+NGjpPsH1Fr+Mc2D1aA==}
+
   /import-fresh@3.3.0:
     resolution: {integrity: sha512-veYYhQa+D1QBKznvhUHxb8faxlrwUnxseDAbAp457E0wLNio2bOSKnjYDhMj+YiAq61xrMGhQk9iXVk5FzgQMw==}
     engines: {node: '>=6'}
@@ -4090,7 +4096,7 @@ packages:
       - supports-color
     dev: false
 
-  /next@13.4.8(react-dom@18.2.0)(react@18.2.0):
+  /next@13.4.8(react-dom@18.2.0)(react@18.2.0)(sass@1.65.1):
     resolution: {integrity: sha512-lxUjndYKjZHGK3CWeN2RI+/6ni6EUvjiqGWXAYPxUfGIdFGQ5XoisrqAJ/dF74aP27buAfs8MKIbIMMdxjqSBg==}
     engines: {node: '>=16.8.0'}
     hasBin: true
@@ -4115,6 +4121,7 @@ packages:
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0(react@18.2.0)
+      sass: 1.65.1
       styled-jsx: 5.1.1(react@18.2.0)
       watchpack: 2.4.0
       zod: 3.21.4
@@ -4739,6 +4746,15 @@ packages:
       get-intrinsic: 1.2.1
       is-regex: 1.1.4
     dev: true
+
+  /sass@1.65.1:
+    resolution: {integrity: sha512-9DINwtHmA41SEd36eVPQ9BJKpn7eKDQmUHmpI0y5Zv2Rcorrh0zS+cFrt050hdNbmmCNKTW3hV5mWfuegNRsEA==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.5.3
+      immutable: 4.3.2
+      source-map-js: 1.0.2
 
   /scheduler@0.23.0:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
