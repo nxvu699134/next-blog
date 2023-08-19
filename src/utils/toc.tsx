@@ -36,21 +36,14 @@ const constructTree = (nodes: Array<TocNode>) => {
 };
 
 const renderTocNode = (node: TocNode) => {
-  if (node.children.length === 0) {
-    return (
-      <li>
-        <a className="toc-link" href={`#${slug(node.text)}`}>
-          {node.text}
-        </a>
-      </li>
-    );
-  }
   return (
     <li>
       <a className="toc-link" href={`#${slug(node.text)}`}>
         {node.text}
       </a>
-      <ol>{node.children.map((child) => renderTocNode(child))}</ol>
+      {node.children.length > 0 && (
+        <ol>{node.children.map((child) => renderTocNode(child))}</ol>
+      )}
     </li>
   );
 };
@@ -58,11 +51,12 @@ const renderTocNode = (node: TocNode) => {
 export const generateTOC = (source: string) => {
   const headings = Array.from(source.matchAll(regexPattern)).map((m) => {
     const { groups } = m;
-    return {
+    const tocNode: TocNode = {
       h: `${groups?.flag.length}`,
-      text: groups?.content,
+      text: groups?.content || "",
       children: [],
-    } as TocNode;
+    };
+    return tocNode;
   });
 
   const tree = constructTree(headings);
