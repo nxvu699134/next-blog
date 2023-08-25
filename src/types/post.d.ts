@@ -2,7 +2,7 @@ export interface PostMatter {
   title: string;
   desc: string;
   tags: Array<string>;
-  date: string;
+  date: Date;
   slug: string;
   image: string;
 }

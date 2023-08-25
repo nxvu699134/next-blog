@@ -30,7 +30,7 @@ const PostCard = (props: PostCardProps) => {
         </div>
       </div>
       <div className="relative h-[224px]">
-        <div className="overlay absolute h-full w-full bg-slate-900/50 opacity-50 transition duration-200 group-hover:opacity-100" />
+        <div className="overlay absolute h-full w-full bg-slate-900/50 opacity-10 transition duration-200 group-hover:opacity-100" />
         <Icon
           name="documentLine"
           className="absolute inset-0 m-auto text-light-content-inverted opacity-0 transition duration-200 group-hover:opacity-80"
@@ -39,10 +39,9 @@ const PostCard = (props: PostCardProps) => {
         <Image
           src={post.image}
           alt={post.title}
-          width={100}
-          height={100}
-          className="object-cover object-center"
-          style={{ width: "100%", height: "100%" }}
+          width={200}
+          height={200}
+          className="h-full w-full object-contain"
         />
       </div>
       <div className="px-8 py-6">
@@ -58,7 +57,7 @@ const Blog = () => {
   return (
     <Fragment>
       <h1>Blog</h1>
-      <div className="grid lg:grid-cols-2 lg:gap-8">
+      <div className="grid gap-8 lg:grid-cols-2">
         {posts.map((p, idx) => (
           <PostCard key={`PostCard_${idx}`} post={p} />
         ))}

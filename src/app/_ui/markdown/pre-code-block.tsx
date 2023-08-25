@@ -12,10 +12,14 @@ const PreCodeBlock = (props: PreCodeBlockProps) => {
     children,
     ...otherProps
   } = props;
-  console.log(props);
   return (
-    <pre data-language={lang} data-theme={theme} {...otherProps}>
-      <label className="block">{lang}</label>
+    <pre
+      data-language={lang}
+      data-theme={theme}
+      {...otherProps}
+      className="whitespace-pre-wrap"
+    >
+      <label className="block uppercase">{lang}</label>
       {children}
     </pre>
   );

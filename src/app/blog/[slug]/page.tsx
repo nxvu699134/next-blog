@@ -7,6 +7,7 @@ import type { MDXComponents } from "mdx/types";
 import { getPost } from "@utils/post";
 import { generateTOC } from "@utils/toc";
 import PreCodeBlock from "@ui/markdown/pre-code-block";
+import { formatDate } from "@utils/date";
 
 interface BlogDetailProps {
   params: { slug: string };
@@ -46,6 +47,7 @@ const BlogDetail = async (props: BlogDetailProps) => {
   return (
     <article className="prose prose-blog flex min-w-[100%] max-w-[100%] flex-col lg:flex-row">
       <h1 className="lg:hidden">{postData.title}</h1>
+      <div className="italic lg:hidden">{formatDate(postData.date)}</div>
       <aside className="mb-8 flex w-full flex-col rounded-big bg-light-background-subtle/50 p-10 lg:-mb-10 lg:-ml-8 lg:-mt-10 lg:mr-8 lg:w-[280px] lg:min-w-[280px]">
         <div className="sticky top-10 lg:opacity-40 lg:transition-opacity lg:hover:opacity-100">
           {toc}
@@ -53,6 +55,9 @@ const BlogDetail = async (props: BlogDetailProps) => {
       </aside>
       <div>
         <h1 className="hidden lg:block">{postData.title}</h1>
+        <div className="hidden italic lg:block">
+          {formatDate(postData.date)}
+        </div>
         {content}
       </div>
     </article>

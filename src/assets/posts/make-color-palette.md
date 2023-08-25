@@ -2,7 +2,7 @@
 title: Make color palette
 desc: The easiest way to pick colors for a palette
 date: 2021-09-17
-image: /posts/make-color-palette/palette.webp
+image: /posts/make-color-palette/poster.png
 tags:
   - website
   - design
