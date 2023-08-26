@@ -1,4 +1,5 @@
 import { ComponentPropsWithoutRef } from "react";
+import { Metadata } from "next";
 import Image from "next/image";
 import Card from "@ui/card";
 import Quote from "@ui/quote";
@@ -10,6 +11,14 @@ import scImg from "@assets/images/icon-sc.svg";
 import vimImg from "@assets/images/icon-vim.svg";
 import fenixImg from "@assets/images/fenix.webp";
 import cheerImg from "@assets/images/icon-cheer.svg";
+
+export const metadata: Metadata = {
+  title: "About",
+  openGraph: {
+    title: "About",
+    type: "website",
+  },
+};
 
 interface FeatureCardProps extends ComponentPropsWithoutRef<"div"> {
   imgSrc: string;

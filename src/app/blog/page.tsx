@@ -1,9 +1,18 @@
 import { ComponentPropsWithoutRef, Fragment } from "react";
+import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Icon from "@ui/icon";
 import { getAllPost } from "@utils/post";
 import type { PostMatter } from "types/post";
+
+export const metadata: Metadata = {
+  title: "Blog",
+  openGraph: {
+    title: "Blog",
+    type: "website",
+  },
+};
 
 interface PostCardProps extends ComponentPropsWithoutRef<"article"> {
   post: PostMatter;

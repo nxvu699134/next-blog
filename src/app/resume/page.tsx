@@ -1,10 +1,19 @@
 import { Fragment } from "react";
+import { Metadata } from "next";
 import Timeline from "@ui/timeline";
 import Image from "next/image";
 import experienceImg from "@assets/images/icon-experience.svg";
 import educationImg from "@assets/images/icon-education.svg";
 import techImg from "@assets/images/icon-tech.svg";
 import Badge from "@ui/badge";
+
+export const metadata: Metadata = {
+  title: "Résumé",
+  openGraph: {
+    title: "Résumé",
+    type: "website",
+  },
+};
 
 const Resume = () => {
   return (
