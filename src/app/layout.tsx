@@ -3,7 +3,7 @@ import clsx from "clsx";
 import "@styles/globals.scss";
 import NavBar from "@components/nav-bar";
 import SideBarContainer from "@components/side-bar-container";
-import { inter, aleo } from "./fonts";
+import { inter, aleo } from "@constants/fonts";
 import siteInfo from "@constants/site-info";
 
 export const metadata: Metadata = {
