@@ -1,7 +1,18 @@
 import type { Metadata } from "next";
-import { getPost } from "@utils/post";
+import { getPost, getAllPost } from "@utils/post";
 import { formatDate } from "@utils/date";
 import { compileMdx } from "@mdx/compile";
+
+const dynamicParams = false;
+export { dynamicParams };
+
+export const generateStaticParams = async () => {
+  const posts = getAllPost();
+
+  return posts.map((post) => ({
+    slug: post.slug,
+  }));
+};
 
 type Props = {
   params: { slug: string };
