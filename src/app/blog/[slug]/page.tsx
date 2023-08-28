@@ -1,14 +1,7 @@
-import type { Metadata, ResolvingMetadata } from "next";
-import { compileMDX, MDXRemoteProps } from "next-mdx-remote/rsc";
-import rehypeSlug from "rehype-slug";
-import rehypePrettyCode, {
-  Options as PrettyCodeOptions,
-} from "rehype-pretty-code";
-import type { MDXComponents } from "mdx/types";
+import type { Metadata } from "next";
 import { getPost } from "@utils/post";
-import { generateTOC } from "@utils/toc";
-import PreCodeBlock from "@ui/markdown/pre-code-block";
 import { formatDate } from "@utils/date";
+import { compileMdx } from "@mdx/compile";
 
 type Props = {
   params: { slug: string };
@@ -32,37 +25,10 @@ interface BlogDetailProps {
   params: { slug: string };
 }
 
-const mdxComponents: MDXComponents = {
-  pre: PreCodeBlock,
-};
-
-const useMDX = async (source: string) => {
-  const { content } = await compileMDX({
-    source: source,
-    components: mdxComponents,
-    options: {
-      mdxOptions: {
-        rehypePlugins: [
-          rehypeSlug,
-          [
-            rehypePrettyCode,
-            {
-              theme: "github-light",
-              keepBackground: false,
-            } as PrettyCodeOptions,
-          ],
-        ],
-      },
-    },
-  } as MDXRemoteProps);
-  const toc = generateTOC(source);
-  return { toc, content };
-};
-
 const BlogDetail = async (props: BlogDetailProps) => {
   const { params } = props;
   const postData = getPost(params.slug, false);
-  const { toc, content } = await useMDX(postData.content);
+  const { toc, content } = await compileMdx(postData.content);
   return (
     <article className="prose prose-blog flex min-w-[100%] max-w-[100%] flex-col lg:flex-row">
       <h1 className="lg:hidden">{postData.title}</h1>

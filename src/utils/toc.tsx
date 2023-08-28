@@ -1,3 +1,4 @@
+import { ReactElement } from "react";
 import { slug } from "github-slugger";
 
 const regexPattern = new RegExp(/(?<flag>#{1,6})\s+(?<content>.+)/g);
@@ -10,7 +11,7 @@ interface TocNode {
 
 const MIN_HEADER = "2"; // h1 is for page title
 
-const constructTree = (nodes: Array<TocNode>) => {
+const constructTree = (nodes: Array<TocNode>): TocNode[] => {
   const stack = [];
 
   for (let i = 0; i < nodes.length; i++) {
@@ -35,7 +36,7 @@ const constructTree = (nodes: Array<TocNode>) => {
   return nodes.filter((hd) => hd.h === MIN_HEADER);
 };
 
-const renderTocNode = (node: TocNode) => {
+const renderTocNode = (node: TocNode): ReactElement => {
   return (
     <li>
       <a className="toc-link" href={`#${slug(node.text)}`}>
@@ -48,7 +49,7 @@ const renderTocNode = (node: TocNode) => {
   );
 };
 
-export const generateTOC = (source: string) => {
+export const generateTOC = (source: string): ReactElement => {
   const headings = Array.from(source.matchAll(regexPattern)).map((m) => {
     const { groups } = m;
     const tocNode: TocNode = {
