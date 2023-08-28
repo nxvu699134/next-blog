@@ -8,9 +8,11 @@ import type { PostMatter } from "types/post";
 
 export const metadata: Metadata = {
   title: "Blog",
+  description: "All Vu's posts about anything",
   openGraph: {
     title: "Blog",
     type: "website",
+    images: "/android-chrome-192x192.png",
   },
 };
 

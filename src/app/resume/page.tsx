@@ -9,9 +9,11 @@ import Badge from "@ui/badge";
 
 export const metadata: Metadata = {
   title: "Résumé",
+  description: "Vu's Resume",
   openGraph: {
     title: "Résumé",
     type: "website",
+    images: "/android-chrome-192x192.png",
   },
 };
 

@@ -14,9 +14,11 @@ import cheerImg from "@assets/images/icon-cheer.svg";
 
 export const metadata: Metadata = {
   title: "About",
+  description: "Vu's bio information",
   openGraph: {
     title: "About",
     type: "website",
+    images: "/android-chrome-192x192.png",
   },
 };
 

@@ -34,10 +34,8 @@ export const metadata: Metadata = {
     canonical: "/",
   },
   openGraph: {
-    description: siteInfo.desc,
     url: siteInfo.siteUrl,
     siteName: siteInfo.siteName,
-    images: ["/android-chrome-192x192.png"],
   },
   robots: {
     index: false,
