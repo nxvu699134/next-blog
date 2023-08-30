@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import clsx from "clsx";
+import { Analytics } from "@vercel/analytics/react";
 import "@styles/globals.scss";
 import NavBar from "@components/nav-bar";
 import SideBarContainer from "@components/side-bar-container";
@@ -76,6 +77,7 @@ export default function RootLayout({
             {children}
           </div>
         </main>
+        <Analytics />
       </body>
     </html>
   );
