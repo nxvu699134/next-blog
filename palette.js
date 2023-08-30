@@ -166,6 +166,19 @@ const cyan = {
   950: "#083344",
 };
 
+const emerald = {
+  50: "#EBFCF4",
+  100: "#D0F9E4",
+  200: "#A6F2CF",
+  300: "#6EE6B6",
+  400: "#34D298",
+  500: "#10B880",
+  600: "#059569",
+  700: "#047857",
+  800: "#065F46",
+  900: "#064E3B",
+  950: "#022C22",
+};
 export const PALETTE = {
   slate,
   gray,
@@ -179,4 +192,5 @@ export const PALETTE = {
   orange,
   amber,
   cyan,
+  emerald,
 };
