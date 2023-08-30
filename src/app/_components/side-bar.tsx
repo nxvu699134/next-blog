@@ -67,7 +67,7 @@ const SideBar = () => {
             </a>
           </li>
         </ul>
-        <CTALink download>
+        <CTALink download href="/NguyenXuanVu_Resume.pdf">
           <Icon name="downloadFill" size={20} className="mr-2" />
           Download CV
         </CTALink>
