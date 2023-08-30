@@ -7,6 +7,7 @@ import { inter, aleo } from "@constants/fonts";
 import siteInfo from "@constants/site-info";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.BASE_DOMAIN),
   keywords: [...siteInfo.keywords],
   icons: {
     icon: [
